@@ -424,8 +424,8 @@ const socials = [
   },
   {
     name: "Twitter",
-    handle: "@lee_lin_",
-    url: "https://twitter.com",
+    handle: "@LeeLinAI123",
+    url: "https://twitter.com/LeeLinAI123",
   },
   {
     name: "Xiaohongshu",

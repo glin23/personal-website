@@ -96,6 +96,16 @@ export const metadata: Metadata = {
     title: "Lee Lin — AI Builder",
     description:
       "Solo builder shipping AI products from Boston. Currently: Resume2Web, Semori.",
+    // Reuse the same dynamic OG image for Twitter cards.
+    // The file convention auto-injects og:image but not twitter:image.
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Lee Lin — AI Builder. Solo builder shipping AI products from Boston.",
+      },
+    ],
   },
   category: "technology",
 };
