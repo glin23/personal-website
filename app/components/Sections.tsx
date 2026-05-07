@@ -487,18 +487,12 @@ export function ContactSection() {
               </li>
             ))}
           </ul>
-          <p className="h-mono text-stone pt-4">
-            ★ = main channel — best place to reach me
-          </p>
         </motion.div>
       </div>
 
       <div className="rule mt-24 mb-8" />
       <div className="flex items-center justify-between">
         <span className="h-mono text-stone">© Lee Lin · 2026</span>
-        <span className="h-mono text-stone">
-          built with three.js + sleep deprivation
-        </span>
       </div>
     </section>
   );
