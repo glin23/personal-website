@@ -143,7 +143,7 @@ export default function Image() {
               marginTop: 16,
             }}
           >
-            shipping ai products from boston
+            shipping ai products
           </div>
         </div>
 
