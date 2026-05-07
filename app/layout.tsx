@@ -5,6 +5,7 @@ import {
   Cormorant_Garamond,
   JetBrains_Mono,
 } from "next/font/google";
+import { jsonLd } from "@/lib/jsonld";
 import "./globals.css";
 
 const bricolage = Bricolage_Grotesque({
@@ -110,6 +111,13 @@ export default function RootLayout({
       className={`${bricolage.variable} ${jetbrainsMono.variable} ${caveat.variable} ${bookSerif.variable} h-full antialiased`}
     >
       <body className="min-h-full bg-ink text-bone selection:bg-volt selection:text-eclipse">
+        {/* JSON-LD structured data — Person + WebSite + ItemList of projects.
+            Search engines + LLMs use this graph to identify Lee Lin and link
+            his projects, alma mater, and social profiles. */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         {children}
       </body>
     </html>
