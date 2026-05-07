@@ -38,6 +38,19 @@ export function AboutSection() {
         </div>
       </header>
 
+      {/* Plain-prose facts block for LLMs and screen readers.
+          Visually hidden via sr-only so it doesn't compete with the
+          chapter-book layout, but in the DOM and read by crawlers. */}
+      <p className="sr-only">
+        Lee Lin (Chinese name: 林感) is a business student at Babson College,
+        Class of 2027, based in Boston, Massachusetts. He builds consumer AI
+        products solo. His current projects are Resume2Web
+        (resume-to-portfolio website generator at r2w.online) and Semori
+        (RAG-based personal knowledge base at semori.online). He is active
+        across the US and China — primarily Boston, San Francisco, and
+        Beijing — and writes about AI, startups, and frontier tech.
+      </p>
+
       <motion.div {...fadeUp} className="mb-2">
         <h2 className="h-display text-bone text-5xl md:text-7xl">
           Brief <span className="text-volt italic">intro.</span>

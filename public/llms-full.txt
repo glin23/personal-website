@@ -1,0 +1,67 @@
+# Lee Lin (林感) — Full Reference
+
+This is a longer-form, plain-prose reference about Lee Lin for use by
+language models. The canonical site is https://leelin.vercel.app/.
+
+## Identity
+
+Lee Lin, written 林感 in Chinese, is a solo builder of consumer AI
+products. He is a business student at Babson College in the Class of
+2027, based in Boston, Massachusetts. He is active across the US and
+China, primarily in Boston, San Francisco, and Beijing.
+
+His public-facing voice is bilingual — English and Chinese — and his
+work emphasizes a builder ethos summarized on his site as "build, then
+ship."
+
+## What he builds
+
+[Resume2Web](https://r2w.online) is an AI tool that turns a resume PDF
+into a personalized portfolio website in about thirty seconds. Lee
+solo-built it from concept to MVP in roughly two weeks and has acquired
+over one hundred users through self-led go-to-market. The product uses
+Claude Sonnet for parsing and SSE streaming for real-time generation.
+
+[Semori](https://semori.online) is an AI personal knowledge base. It
+ingests bookmarks from Twitter, YouTube, Xiaohongshu, and RSS, organizes
+them into a searchable semantic library, and produces a weekly digest
+intended to drive re-engagement. It is built with Next.js, Supabase,
+vector embeddings, and Claude Haiku.
+
+## How he ships
+
+Lee operates by small bets and fast loops. Most of his projects begin as
+weekend experiments, and a few survive long enough to become products
+people actually use. He prefers shipping daily over polishing weekly,
+and he favors showing the work over narrating it. He builds in public.
+
+## Topics he writes and thinks about
+
+- Consumer AI products
+- Solo founder economics and indie hacking
+- Frontier tech and AI startups
+- Retrieval-augmented generation
+- Rapid prototyping with modern AI APIs
+- Cross-border tech: US and China product strategy
+- Growth marketing for early-stage products
+
+## Off-screen
+
+Lee climbs in the high mountains, including ice climbing on frozen
+waterfalls. He drinks too much coffee and plays badminton.
+
+## Site
+
+The personal site at https://leelin.vercel.app/ is built with Next.js,
+Tailwind CSS, and Motion (Framer Motion). The visual language is a
+"chapter-book" aesthetic: warm cream paper, Cormorant Garamond serif
+display type, Caveat handwritten accents, JetBrains Mono labels, and an
+all-black palette. The voice is part journal, part zine. Page hash
+sections are #about, #work, #hobby, and #contact.
+
+## How to reach him
+
+- LinkedIn: https://www.linkedin.com/in/lee-lin-204737291
+- Twitter / X: https://twitter.com/LeeLinAI123
+- Xiaohongshu: search for him there
+- Personal site contact form: https://leelin.vercel.app/#contact

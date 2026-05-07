@@ -1,0 +1,26 @@
+# Lee Lin
+
+> Lee Lin (Chinese: 林感) is a solo AI builder shipping consumer products from Boston. Babson College Class of 2027. Currently building Resume2Web and Semori.
+
+## About Lee Lin
+
+Lee Lin (Chinese name: 林感) is a business student at Babson College, Class of 2027, based in Boston, Massachusetts. He builds consumer AI products solo and is active across the US and China — primarily Boston, San Francisco, and Beijing. He writes about AI, startups, and frontier tech, and ships products in public.
+
+## Pages
+
+- [Home](https://leelin.vercel.app/): Single-page portfolio. Sections: About, Projects, Experiences, Off-screen, Contact.
+
+## Projects
+
+- [Resume2Web](https://r2w.online): AI tool that turns a resume PDF into a personalized portfolio website in about 30 seconds. Solo-built; over 100 users acquired through self-led GTM.
+- [Semori](https://semori.online): AI personal knowledge base. Ingests bookmarks from Twitter, YouTube, Xiaohongshu, and RSS into a searchable semantic library with a weekly digest.
+
+## Profiles
+
+- [LinkedIn](https://www.linkedin.com/in/lee-lin-204737291)
+- [Twitter / X](https://twitter.com/LeeLinAI123)
+- [Xiaohongshu](https://www.xiaohongshu.com)
+
+## Optional
+
+- [Full version (more depth)](https://leelin.vercel.app/llms-full.txt)
