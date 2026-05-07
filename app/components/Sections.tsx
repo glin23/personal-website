@@ -385,7 +385,9 @@ export function ExperiencesSection() {
                       src={src}
                       accent={e.accent}
                       index={j}
-                      alt={`${e.org} — photo ${j + 1}`}
+                      alt={
+                        e.photoAlts?.[j] ?? `${e.org} — photo ${j + 1}`
+                      }
                     />
                   ))}
                 </div>

@@ -15,6 +15,8 @@ type Photo = {
   src: string;
   caption: string;
   loc?: string;
+  /** descriptive alt for screen readers + SEO; kept generic on purpose */
+  alt: string;
   rotate: number;
   /** true = landscape, spans 2 columns + 3:2 aspect; false = portrait, 1 column + 4:5 */
   wide?: boolean;
@@ -25,12 +27,14 @@ const photos: Photo[] = [
     src: "/photos/mountain/01.jpg",
     caption: "ice climb",
     loc: "Sichuan · winter",
+    alt: "Ice climber on a frozen waterfall, holding two ice axes with crampons on the wall.",
     rotate: -2,
   },
   {
     src: "/photos/mountain/02.jpg",
     caption: "dawn push",
     loc: "headlamps · 4 a.m.",
+    alt: "Hiker on an alpine ridge before sunrise, deep blue sky and a valley filled with cloud below.",
     rotate: 2,
     wide: true,
   },
@@ -38,18 +42,21 @@ const photos: Photo[] = [
     src: "/photos/mountain/03.jpg",
     caption: "first light",
     loc: "the ridge",
+    alt: "Hiker silhouetted against an alpine ridge at first light.",
     rotate: -3,
   },
   {
     src: "/photos/mountain/04.jpg",
     caption: "summit · 5025m",
     loc: "奥太娜 / Aoteyna",
+    alt: "Climber sitting on a rock at an alpine summit with snow-capped peaks behind.",
     rotate: 2,
   },
   {
     src: "/photos/mountain/05.jpg",
     caption: "the crew",
     loc: "top of Aoteyna",
+    alt: "Three climbers at an alpine summit beside Tibetan prayer flags.",
     rotate: -1,
   },
 ];
@@ -181,7 +188,7 @@ function Polaroid({ photo, index }: { photo: Photo; index: number }) {
             // eslint-disable-next-line @next/next/no-img-element
             <img
               src={photo.src}
-              alt={photo.caption}
+              alt={photo.alt}
               draggable={false}
               onError={() => setFailed(true)}
               className="absolute inset-0 w-full h-full object-cover select-none"

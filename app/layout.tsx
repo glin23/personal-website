@@ -35,8 +35,68 @@ const bookSerif = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "Lee Lin — AI Builder",
-  description: "Solo builder shipping AI products from Boston. Babson '27.",
+  metadataBase: new URL("https://leelin.vercel.app"),
+  title: {
+    default: "Lee Lin — AI Builder",
+    template: "%s · Lee Lin",
+  },
+  description:
+    "Lee Lin (林感) is a solo AI builder shipping consumer products from Boston. Babson Class of 2027. Currently building Resume2Web and Semori.",
+  applicationName: "Lee Lin · Personal Site",
+  keywords: [
+    "Lee Lin",
+    "林感",
+    "AI builder",
+    "indie hacker",
+    "Resume2Web",
+    "Semori",
+    "Babson College",
+    "Boston AI",
+    "consumer AI",
+    "RAG",
+    "personal portfolio",
+    "solo founder",
+  ],
+  authors: [{ name: "Lee Lin", url: "https://leelin.vercel.app" }],
+  creator: "Lee Lin",
+  publisher: "Lee Lin",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  alternates: {
+    canonical: "https://leelin.vercel.app",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://leelin.vercel.app",
+    siteName: "Lee Lin",
+    title: "Lee Lin — AI Builder",
+    description:
+      "Solo builder shipping AI products from Boston. Currently: Resume2Web, Semori. Babson '27.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@LeeLinAI123",
+    creator: "@LeeLinAI123",
+    title: "Lee Lin — AI Builder",
+    description:
+      "Solo builder shipping AI products from Boston. Currently: Resume2Web, Semori.",
+  },
+  category: "technology",
 };
 
 export default function RootLayout({

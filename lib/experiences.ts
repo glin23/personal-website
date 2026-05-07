@@ -16,6 +16,8 @@ export type EventActivity = {
   accent: string;
   // photo slots — Lee will fill
   photos?: string[];
+  // descriptive alt text for each photo (parallel to `photos`)
+  photoAlts?: string[];
 };
 
 // Internships + Co-Founder roles
@@ -69,6 +71,9 @@ export const organizing: EventActivity[] = [
       "Co-organized a full-day bootcamp for 27 small-business owners. Delivered live AI product demos and 1-on-1 coaching sessions.",
     accent: "#18181b",
     photos: ["/photos/babson/01.jpg"],
+    photoAlts: [
+      "Group photo of attendees and organizers at the Babson AI Innovators Bootcamp inside The Generator Interdisciplinary AI Lab.",
+    ],
   },
   {
     org: "Harvard China Innovation & Investment Conference (CIIC)",
@@ -79,5 +84,8 @@ export const organizing: EventActivity[] = [
       "Directed on-site stage management, speaker coordination, and audio/visual production for conferences in Boston and Shanghai (300+ attendees).",
     accent: "#18181b",
     photos: ["/photos/ciic/01.jpg"],
+    photoAlts: [
+      "Harvard China Innovation & Investment Conference team on stage in front of the conference banner.",
+    ],
   },
 ];
