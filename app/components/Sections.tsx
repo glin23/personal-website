@@ -403,22 +403,19 @@ export function ExperiencesSection() {
    ----------------------------------------------------------- */
 const socials = [
   {
+    name: "LinkedIn",
+    handle: "lee-lin-204737291",
+    url: "https://www.linkedin.com/in/lee-lin-204737291",
+  },
+  {
     name: "Twitter",
     handle: "@lee_lin_",
     url: "https://twitter.com",
-    priority: true,
   },
   {
     name: "Xiaohongshu",
     handle: "小红书",
     url: "https://www.xiaohongshu.com",
-    priority: true,
-  },
-  {
-    name: "LinkedIn",
-    handle: "lee-lin-204737291",
-    url: "https://www.linkedin.com/in/lee-lin-204737291",
-    priority: false,
   },
 ];
 
@@ -470,12 +467,7 @@ export function ContactSection() {
                   className="group flex items-center justify-between py-4 hover:px-2 transition-all"
                 >
                   <div className="flex items-center gap-4">
-                    {s.priority && <span className="h-mono text-volt">★</span>}
-                    <span
-                      className={`text-2xl md:text-3xl ${
-                        s.priority ? "text-bone" : "text-ash"
-                      } group-hover:text-volt transition-colors`}
-                    >
+                    <span className="text-2xl md:text-3xl text-bone group-hover:text-volt transition-colors">
                       {s.name}
                     </span>
                     <span className="h-mono text-stone">{s.handle}</span>
