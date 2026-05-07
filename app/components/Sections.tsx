@@ -520,15 +520,55 @@ function ContactForm() {
     if (!name.trim() || !email.trim() || !message.trim()) return;
     setSending(true);
     setError(null);
+
+    const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_KEY;
+
+    // No key configured → fall back to the local /api/contact route (which
+    // returns demo:true in development). Lets the form work locally even
+    // without env vars set.
+    if (!accessKey) {
+      try {
+        const r = await fetch("/api/contact", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ name, email, message }),
+        });
+        const j = await r.json().catch(() => ({}));
+        if (!r.ok || !j.ok) {
+          setError(j.error ?? "something_went_wrong");
+          setSending(false);
+          return;
+        }
+        setSending(false);
+        setSent(true);
+      } catch {
+        setError("network_error");
+        setSending(false);
+      }
+      return;
+    }
+
+    // Web3Forms requires a client-side POST on the free tier. The access
+    // key is public by design — it's safe to expose in the browser.
     try {
-      const r = await fetch("/api/contact", {
+      const r = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, message }),
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: accessKey,
+          subject: `[lee.lin/portfolio] message from ${name}`,
+          from_name: "Portfolio Contact",
+          name,
+          email,
+          message,
+        }),
       });
       const j = await r.json().catch(() => ({}));
-      if (!r.ok || !j.ok) {
-        setError(j.error ?? "something_went_wrong");
+      if (!r.ok || !j.success) {
+        setError(j.message ? "send_failed" : "something_went_wrong");
         setSending(false);
         return;
       }
